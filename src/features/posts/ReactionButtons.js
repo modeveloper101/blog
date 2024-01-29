@@ -3,10 +3,10 @@ import { reactionAdded } from "./postsSlice";
 
 const reactionEmoji = {
   thumbsUp: "👍",
-  wow: "😮",
-  heart: "💚",
-  rocket: "🚀",
-  coffee: "☕",
+  wow: "🔥",
+  heart: "🤎",
+  rocket: "🎉",
+  coffee: "😍",
 };
 
 const ReactionButtons = ({ post }) => {
@@ -17,7 +17,7 @@ const ReactionButtons = ({ post }) => {
       <button
         key={name}
         type="button"
-        className="reactionButton"
+        className="text-base tracking-[-2px] mr-2 text-gray-700 font-[300]"
         onClick={() =>
           dispatch(reactionAdded({ postId: post.id, reaction: name }))
         }

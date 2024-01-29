@@ -1,10 +1,14 @@
-import React from 'react'
-import HeroSection from './HeroSection'
+import React from "react";
+import HeroSection from "./HeroSection";
+import PostsList from "../../features/posts/PostsList";
 
 const HomePage = () => {
   return (
-    <HeroSection />
-  )
-}
+    <>
+      <HeroSection />
+      <PostsList />
+    </>
+  );
+};
 
-export default HomePage
+export default HomePage;

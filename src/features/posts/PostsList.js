@@ -9,9 +9,8 @@ import PostsExcerpt from "./PostsExcerpt";
 const PostsList = () => {
   const posts = useSelector(selectAllPosts);
   const postStatus = useSelector(getPostsStatus);
-  const error = useSelector(getPostsError);
+  const error = useSelector(getPostsError); 
   
-
   //Old code to display posts
   // const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
   // const renderedPosts = orderedPosts.map((post) => (
@@ -32,7 +31,8 @@ const PostsList = () => {
   }
 
   return (
-    <section>
+    <section className="flex flex-col w-full h-auto px-5 gap-y-6">
+      <h2 className="font-[500] text-xl">Recent blog posts</h2>
       {content}
     </section>
   );
