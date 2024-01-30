@@ -37,13 +37,17 @@ import { useState } from "react";
 // ));
 
 const PostsExcerpt = ({ post, imageUrl }) => {
-
-  const [isHovered, setIsHoverd] = useState(false)
+  const [isHovered, setIsHoverd] = useState(false);
   return (
-    <article onMouseOver={() => setIsHoverd(true)} onMouseLeave={() => setIsHoverd(false)}>
+    <article
+      onMouseOver={() => setIsHoverd(true)}
+      onMouseLeave={() => setIsHoverd(false)}
+    >
       {/* {imageOption} */}
       <div
-        className={`h-[350px] w-full flex flex-col justify-end p-3 rounded-lg ${!isHovered ? "grayscale" : ""} transition-all duration-300`}
+        className={`h-[350px] w-full flex flex-col justify-end p-3 rounded-lg ${
+          !isHovered ? "grayscale" : ""
+        } transition-all duration-300`}
         style={{
           backgroundImage: `url(${imageUrl})`,
           objectFit: "cover",
@@ -63,7 +67,11 @@ const PostsExcerpt = ({ post, imageUrl }) => {
           {post.body.substring(0, 75)}...{" "}
           <span className="text-base font-[400]">
             <Link to={`post/${post.id}`}>
-              {!isHovered ? <ArrowUpRightIcon className="w-5 h-5 transition-all duration-300" /> : <ArrowUpRightIcon className="w-5 h-5 rotate-45 transition-all duration-300" />}
+              {!isHovered ? (
+                <ArrowUpRightIcon className="w-5 h-5 transition-all duration-300" />
+              ) : (
+                <ArrowUpRightIcon className="w-5 h-5 rotate-45 transition-all duration-300" />
+              )}
             </Link>
           </span>
         </p>
