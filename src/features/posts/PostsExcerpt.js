@@ -1,5 +1,5 @@
-// import PostAuthor from "./PostAuthor";
-// import TimeAgo from "./TimeAgo";
+import PostAuthor from "./PostAuthor";
+import TimeAgo from "./TimeAgo";
 // import ReactionButtons from "./ReactionButtons";
 import { Link } from "react-router-dom";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
@@ -77,16 +77,16 @@ const PostsExcerpt = ({ post, imageUrl }) => {
           backgroundSize: "cover",
         }}
       >
-        {/* <p className="text-sm font-[400] mt-4 text-gray-100">
+        <p className="text-sm font-[300] mt-4 text-gray-200">
           <PostAuthor userId={post.userId} />
           <TimeAgo timeStamp={post.date} />
-        </p> */}
-        <h2 className="butler-font font-[400] leading-[1.2] text-2xl my-1 text-white">
+        </p>
+        <h2 className="butler-font leading-[1.2] text-2xl my-1 text-white">
           {post.title}
         </h2>
         <p className="flex justify-between items-end text-base font-[300] mb-1 text-gray-100 leading-[1.3]">
           {post.body.substring(0, 75)}...{" "}
-          <span className="text-base font-[400]">
+          <span>
             <Link to={`post/${post.id}`}>
               {!isHovered ? (
                 <ArrowUpRightIcon className="w-5 h-5 transition-all duration-300" />
