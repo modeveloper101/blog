@@ -8,7 +8,7 @@ const Subscribe = () => {
           className="font-[300] text-base md:text-lg py-2 px-3 w-full border rounded-[12px]"
           placeholder="Enter your email"
         />
-        <button className="font-[300] absolute bg-black text-white border rounded-[10px] text-base md:text-lg py-1 px-3" style={{top: '50%', right: '2px', transform: 'translate(-2%, -50%)'}}>Subscribe</button>
+        <button className="butler-font font-[300] absolute bg-black text-white border rounded-[10px] text-base md:text-lg py-1 px-3" style={{top: '50%', right: '2px', transform: 'translate(-2%, -50%)'}}>Subscribe</button>
       </div>
 
      

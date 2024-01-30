@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Bars2Icon } from "@heroicons/react/24/outline";
 
 const Header = () => {

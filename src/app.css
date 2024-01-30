@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Butler";
+  src: local("Butler-Light"), url("./fonts/Butler-Light.woff") format("woff");
+}
+
+.butler-font {
+  font-family: "Butler", sans-serif;
+}
