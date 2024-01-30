@@ -3,7 +3,7 @@ import TimeAgo from "./TimeAgo";
 import ReactionButtons from "./ReactionButtons";
 import { Link } from "react-router-dom";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import React from "react";
 
 // const Images = [
@@ -38,6 +38,27 @@ import { useState } from "react";
 
 const PostsExcerpt = ({ post, imageUrl }) => {
   const [isHovered, setIsHoverd] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(9);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0 && window.scrollY <= 600) {
+        setCurrentIndex(9);
+      } else if (window.scrollY > 600 && window.scrollY <= 800) {
+        setCurrentIndex(10);
+      } else if (window.scrollY > 800 && window.scrollY <= 1200) {
+        setCurrentIndex(11);
+      } else if (window.scrollY > 1200) {
+        setCurrentIndex(12);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <article
       onMouseOver={() => setIsHoverd(true)}
@@ -45,8 +66,8 @@ const PostsExcerpt = ({ post, imageUrl }) => {
     >
       {/* {imageOption} */}
       <div
-        className={`h-[350px] w-full flex flex-col justify-end p-3 rounded-lg ${
-          !isHovered ? "grayscale" : ""
+        className={`h-[350px] w-full flex flex-col justify-end p-3  ${
+          post.id === currentIndex ? "" : "grayscale"
         } transition-all duration-300`}
         style={{
           backgroundImage: `url(${imageUrl})`,
@@ -60,10 +81,10 @@ const PostsExcerpt = ({ post, imageUrl }) => {
           <PostAuthor userId={post.userId} />
           <TimeAgo timeStamp={post.date} />
         </p>
-        <h2 className="font-[400] leading-[1.3] text-2xl my-1 text-white">
+        <h2 className="font-[400] leading-[1.2] text-2xl my-1 text-white">
           {post.title}
         </h2>
-        <p className="flex justify-between items-end text-base font-[300] mb-1 text-gray-100">
+        <p className="flex justify-between items-end text-base font-[300] mb-1 text-gray-100 leading-[1.3]">
           {post.body.substring(0, 75)}...{" "}
           <span className="text-base font-[400]">
             <Link to={`post/${post.id}`}>
@@ -80,8 +101,8 @@ const PostsExcerpt = ({ post, imageUrl }) => {
         src={imageUrl}
         alt="blog-post"
         className="h-[400px] w-full object-cover bg-center rounded-xl"
-      /> */}
-      {/* <p className="text-sm font-[400] mt-4 text-gray-700">
+      />
+      <p className="text-sm font-[400] mt-4 text-gray-700">
         <PostAuthor userId={post.userId} />
         <TimeAgo timeStamp={post.date} />
       </p>
