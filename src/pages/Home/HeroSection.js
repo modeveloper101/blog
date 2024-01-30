@@ -4,22 +4,26 @@ import Subscribe from "../../components/Subscribe";
 const HeroSection = () => {
   return (
     <div className="w-full h-auto flex flex-col items-center">
-      <section className="h-auto w-full md:w-full lg:w-[1350px] flex flex-col items-center justify-center pt-[12rem] pb-[6rem]">
+      <section className="h-auto w-full md:w-full lg:w-[1350px] flex flex-col items-center justify-center py-[3rem]">
         <h2 className="font-[400] text-7xl md:text-8xl mb-3 text-center">
-           Inside Cielo
+          Inside
+          <br className="lg:hidden" /> Cielo
           {/* <span>
             <div
-              className="px-[72px] py-8 md:px-[112px] md:py-10 rounded-full bg-red-100 inline-block"
+              className="px-[72px] py-6 md:px-[112px] md:py-10 rounded-full bg-red-100 inline-block"
               style={{
                 backgroundImage: `url("https://images.unsplash.com/flagged/photo-1570733117311-d990c3816c47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
               }}
             ></div>
           </span> */}
         </h2>
-        <h2 className="font-[300] text-lg px-5 md:text-2xl text-center mb-8 text-gray-700">Subscribe to learn more about new products, sales, articles, and updates.</h2>
+        <h2 className="font-[300] text-lg px-5 md:text-2xl text-center mb-8 text-gray-700">
+          Subscribe to learn more about new products, sales, articles, and
+          updates.
+        </h2>
         <Subscribe />
       </section>
     </div>

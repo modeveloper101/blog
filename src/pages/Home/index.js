@@ -1,12 +1,12 @@
 import React from "react";
 import HeroSection from "./HeroSection";
-import PostsList from "../../features/posts/PostsList";
+import RecentPosts from "../../features/posts/RecentPosts";
 
 const HomePage = () => {
   return (
     <>
       <HeroSection />
-      <PostsList />
+      <RecentPosts />
     </>
   );
 };

@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { getCount, increaseCount } from "../features/posts/postsSlice";
+import { Bars2Icon } from "@heroicons/react/24/outline";
 
 const Header = () => {
-  const dispatch = useDispatch();
-  const count = useSelector(getCount);
 
   return (
-    <header className="Header">
-      <h1 className="text-red-400">Redux Blog</h1>
-      <nav>
-        <ul>
+    <header className="w-full p-[1rem] flex items-center justify-between">
+      <h1 className="">Cielo Blog</h1>
+      <nav className="flex items-center">
+        <button>
+          <Bars2Icon className="h-8 w-8"/>
+        </button>
+        {/* <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -20,9 +20,8 @@ const Header = () => {
           <li>
             <Link to="user">Users</Link>
           </li>
-        </ul>
+        </ul> */}
       </nav>
-      <button onClick={() => dispatch(increaseCount())}>{count}</button>
     </header>
   );
 };
