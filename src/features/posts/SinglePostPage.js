@@ -50,7 +50,7 @@ const SinglePostPage = () => {
   }
 
   return (
-    <article className="px-4 h-auto py-6">
+    <article className="px-4 h-auto pt-4 pb-8">
       <div
         className="h-[200px] w-full rounded-xl"
         style={{

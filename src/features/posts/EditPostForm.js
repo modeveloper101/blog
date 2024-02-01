@@ -5,6 +5,29 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import { selectAllUsers } from "../users/usersSlice";
 
+const Images = [
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1573655349936-de6bed86f839?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    id: 9,
+  },
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1618352319006-c22d55758c54?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    id: 10,
+  },
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    id: 11,
+  },
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1528120369764-0423708119ae?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    id: 12,
+  },
+];
+
 const EditPostForm = () => {
   const { postId } = useParams();
   const navigate = useNavigate();
@@ -16,6 +39,11 @@ const EditPostForm = () => {
   const [content, setContent] = useState(post?.body);
   const [userId, setUserId] = useState(post?.userId);
   const [requestStatus, setRequestStatus] = useState("idle");
+
+  const image = Images.find((image) => image.id === Number(postId));
+  const imgUrl = image
+    ? image.imgUrl
+    : "https://images.unsplash.com/photo-1595236629937-aadaf7c1d99d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   const dispatch = useDispatch();
 
@@ -57,7 +85,7 @@ const EditPostForm = () => {
   };
 
   const usersOptions = users.map((user) => (
-    <option key={user.id} value={user.id}>
+    <option className="bg-[#1E1E1E]" key={user.id} value={user.id}>
       {user.name}
     </option>
   ));
@@ -74,7 +102,7 @@ const EditPostForm = () => {
       setTitle("");
       setContent("");
       setUserId("");
-      navigate('/');
+      navigate("/");
     } catch (error) {
       console.error("Failed to delete the post", error);
     } finally {
@@ -83,11 +111,23 @@ const EditPostForm = () => {
   };
 
   return (
-    <section>
-      <h2>Edit Post</h2>
+    <section className="min-h-[100vh] px-4 pt-4 pb-8">
+      <div
+        className="h-[200px] w-full rounded-xl mb-4"
+        style={{
+          backgroundImage: `url(${imgUrl})`,
+          objectFit: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      ></div>
       <form>
-        <label htmlFor="postTitle">Post Title:</label>
+        <label className="text-lg font-[400] px-1" htmlFor="postTitle">
+          Post Title{" "}
+        </label>
         <input
+          className="text-base text-[#C2C2C2] font-[200] bg-transparent border-b border-[#2C2C2C] py-2.5 px-1 min-w-full mt-1 mb-4 focus:ring-blue-500 focus:border-b-blue-500"
           type="text"
           id="postTitle"
           name="postTitle"
@@ -96,19 +136,26 @@ const EditPostForm = () => {
             setTitle(e.target.value);
           }}
         />
-        <label htmlFor="postAuthor">Author:</label>
+        <label className="text-lg font-[400] px-1" htmlFor="postAuthor">
+          Author
+        </label>
         <select
+          className="text-base text-[#C2C2C2] font-[200] bg-transparent border-b border-[#2C2C2C] py-2.5  min-w-full mt-1 mb-4"
           id="postAuthor"
           defaultValue={userId}
           onChange={(e) => {
             setUserId(Number(e.target.value));
           }}
         >
-          <option value=""></option>
+          <option className="bg-[#1E1E1E]" value=""></option>
           {usersOptions}
         </select>
-        <label htmlFor="postContent">Content:</label>
+        <label className="text-lg font-[400] px-1" htmlFor="postContent">
+          Content{" "}
+        </label>
         <textarea
+          className="text-base font-[200] text-[#C2C2C2] bg-transparent border-b border-[#2C2C2C] py-2.5 px-1 min-w-full h-auto min-h-[120px] mt-1"
+          style={{ resize: "vertical" }}
           id="postContent"
           name="postContent"
           value={content}
@@ -116,16 +163,23 @@ const EditPostForm = () => {
             setContent(e.target.value);
           }}
         />
-        <button type="button" onClick={onSavePostClicked} disabled={!canSave}>
-          Save Post
-        </button>
-        <button
-          className="deleteButton"
-          type="button"
-          onClick={onDeletePostClicked}
-        >
-          Delete Post
-        </button>
+        <div className="mt-auto">
+          <button
+            className="flex item-center justify-center py-2 rounded-xl w-full font-[400] uppercase bg-[#1E1E1E] text-base"
+            type="button"
+            onClick={onSavePostClicked}
+            disabled={!canSave}
+          >
+            Save 
+          </button>
+          <button
+            className="flex item-center justify-center py-2 rounded-xl w-full font-[500] uppercase bg-transparent text-[#8C1818] text-base mt-2"
+            type="button"
+            onClick={onDeletePostClicked}
+          >
+            Delete Post
+          </button>
+        </div>
       </form>
     </section>
   );
