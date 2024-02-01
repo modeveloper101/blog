@@ -3,10 +3,10 @@ import { reactionAdded } from "./postsSlice";
 import { HandThumbUpIcon, HeartIcon, RocketLaunchIcon } from "@heroicons/react/24/solid";
 
 const reactionEmoji = {
-  thumbsUp: <HandThumbUpIcon className="w-4 h-4 text-blue-300"/>,
+  thumbsUp: <HandThumbUpIcon className="w-5 h-5 text-blue-300"/>,
   // wow: "🔥",
-  heart: <HeartIcon className="w-4 h-4 text-red-300"/>,
-  rocket: <RocketLaunchIcon className="w-4 h-4 text-indigo-400"/>,
+  heart: <HeartIcon className="w-5 h-5 text-red-300"/>,
+  rocket: <RocketLaunchIcon className="w-5 h-5 text-indigo-400"/>,
   // coffee: "😍",
 };
 
