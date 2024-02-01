@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <main className="App">
+      <main className="App bg-[#010101] text-[#E6E4E0]">
         <Outlet />
       </main>
     </>

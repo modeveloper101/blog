@@ -21,7 +21,7 @@ const HeroSection = () => {
           </span>
           .
         </h2>
-        <h2 className="font-[300] text-lg px-5 md:text-2xl text-center mb-8 text-gray-700">
+        <h2 className="font-[300] text-lg px-5 md:text-2xl text-center mb-8">
           Subscribe to learn more about new products, sales, articles, and
           updates.
         </h2>

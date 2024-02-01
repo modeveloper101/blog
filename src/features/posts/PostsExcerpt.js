@@ -44,11 +44,11 @@ const PostsExcerpt = ({ post, imageUrl }) => {
     const handleScroll = () => {
       if (window.scrollY > 0 && window.scrollY <= 600) {
         setCurrentIndex(9);
-      } else if (window.scrollY > 600 && window.scrollY <= 800) {
+      } else if (window.scrollY > 600 && window.scrollY <= 1000) {
         setCurrentIndex(10);
-      } else if (window.scrollY > 800 && window.scrollY <= 1200) {
+      } else if (window.scrollY > 1000 && window.scrollY <= 1400) {
         setCurrentIndex(11);
-      } else if (window.scrollY > 1200) {
+      } else if (window.scrollY > 1400) {
         setCurrentIndex(12);
       }
     };
@@ -66,7 +66,7 @@ const PostsExcerpt = ({ post, imageUrl }) => {
     >
       {/* {imageOption} */}
       <div
-        className={`h-[350px] w-full flex flex-col justify-end p-3  ${
+        className={`h-[350px] w-full flex flex-col justify-end p-3 rounded-xl ${
           post.id === currentIndex ? "" : "grayscale"
         } transition-all duration-300`}
         style={{
