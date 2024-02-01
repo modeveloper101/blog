@@ -67,7 +67,7 @@ const PostsExcerpt = ({ post, imageUrl }) => {
       {/* {imageOption} */}
       <div
         className={`h-[350px] w-full flex flex-col justify-end p-3 rounded-xl ${
-          post.id === currentIndex  ? "" : "grayscale"
+          post.id === currentIndex ? "" : "grayscale"
         } transition-all duration-300`}
         style={{
           backgroundImage: `url(${imageUrl})`,
@@ -83,20 +83,6 @@ const PostsExcerpt = ({ post, imageUrl }) => {
         </p>
         <h2 className="flex justify-between items-end butler-font leading-[1.2] text-2xl my-1 text-white">
           {post.title}
-          {/* <span>
-            <Link to={`post/${post.id}`}>
-              {!isHovered ? (
-                <ArrowUpRightIcon className="w-5 h-5 transition-all duration-300" />
-              ) : (
-                <ArrowUpRightIcon className="w-5 h-5 rotate-45 transition-all duration-300" />
-              )}
-            </Link>
-          </span> */}
-        </h2>
-        <p className={`flex justify-between items-end text-base font-[300] mb-1 text-gray-100 leading-[1.3] ${
-          post.id === currentIndex  ? "opacity-1 h-auto" : "opacity-0 h-0 duration-0"
-        } transition-all  duration-300 `}>
-          {post.body.substring(0, 75)}...{" "}
           <span>
             <Link to={`post/${post.id}`}>
               {!isHovered ? (
@@ -104,6 +90,16 @@ const PostsExcerpt = ({ post, imageUrl }) => {
               ) : (
                 <ArrowUpRightIcon className="w-5 h-5 rotate-45 transition-all duration-300" />
               )}
+            </Link>
+          </span>
+        </h2>
+        <p
+          className={`flex justify-between items-end text-base font-[300] mb-1 text-gray-100 leading-[1.3] hidden `}
+        >
+          {post.body.substring(0, 75)}...{" "}
+          <span>
+            <Link to={`post/${post.id}`}>
+              <ArrowUpRightIcon className="w-5 h-5 transition-all duration-300" />
             </Link>
           </span>
         </p>
