@@ -2,7 +2,7 @@ import React from "react";
 
 const SliderCard = ({ name, website }) => {
   return (
-    <div className="relative w-full h-[350px] border-b border-[#C2C2C2]">
+    <div className="relative w-full h-[350px] border-b border-[#2C2C2C]">
       <div
         className="w-full h-full flex flex-col justify-between relative p-5"
         style={{
@@ -15,7 +15,7 @@ const SliderCard = ({ name, website }) => {
       >
         <p className="butler-font text-4xl z-10">{name}</p>
         <div className="flex justify-between items-center z-10">
-          <div className="flex gap-x-1">
+          <div className="flex items-center gap-x-1">
             <p className="butler-font text-base bg-[#010101] text-[#E6E4E0] w-fit py-1 px-3 rounded-full">
               {website}
             </p>
