@@ -29,8 +29,8 @@ const RecentPosts = () => {
     content = <p>{error}</p>;
   }
   return (
-    <section className="flex flex-col w-full h-auto px-5 gap-y-4">
-      <h2 className="font-[500] text-xl mb-1">Recent blog posts</h2>
+    <section className="flex flex-col w-full h-auto">
+      <h2 className="font-[500] text-xl mb-1 px-5">Recent blog posts</h2>
       {content}
     </section>
   );

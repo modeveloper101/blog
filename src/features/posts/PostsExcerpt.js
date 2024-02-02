@@ -66,7 +66,7 @@ const PostsExcerpt = ({ post, imageUrl }) => {
     >
       {/* {imageOption} */}
       <div
-        className={`h-[350px] w-full flex flex-col justify-end p-3 rounded-xl ${
+        className={`h-[350px] w-full flex flex-col justify-end p-5 ${
           post.id === currentIndex ? "" : "grayscale"
         } transition-all duration-300`}
         style={{
