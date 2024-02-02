@@ -13,7 +13,7 @@ const SliderCard = ({ name, website }) => {
           filter: "grayscale(20%)"
         }}
       >
-        <p className="butler-font text-4xl z-10">{name}</p>
+        <p className="butler-font text-4xl z-10 text-[#E6E4E0]">{name}</p>
         <div className="flex justify-between items-center z-10">
           <div className="flex items-center gap-x-1">
             <p className="butler-font text-base bg-[#010101] text-[#E6E4E0] w-fit py-1 px-3 rounded-full">
@@ -23,9 +23,9 @@ const SliderCard = ({ name, website }) => {
               Featured author
             </p>
           </div>
-          <span className="text-base">See blogs</span>
+          <span className="text-base text-[#E6E4E0]">See blogs</span>
         </div>
-        <div className="absolute inset-0 bg-[#E6E4E0] opacity-1 hover:opacity-0 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-[#010101] opacity-1 hover:opacity-0 transition-opacity duration-500"></div>
       </div>
     </div>
   );

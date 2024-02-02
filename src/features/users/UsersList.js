@@ -8,7 +8,7 @@ const UsersList = () => {
 
   const users = useSelector(selectAllUsers);
 
-  const renderedUsers = users.slice(0,4).map((user, index) => (
+  const renderedUsers = users.slice(0,3).map((user, index) => (
     <SliderCard key={index} name={user.name} website={user.website}/>
   ));
 
