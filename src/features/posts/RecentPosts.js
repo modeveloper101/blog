@@ -30,7 +30,7 @@ const RecentPosts = () => {
   }
   return (
     <section className="flex flex-col w-full h-auto">
-      <h2 className="font-[500] text-xl mb-1 px-5">Recent blog posts</h2>
+      <h2 className="font-[500] text-2xl mb-1 px-5 mb-5">Recent blog posts</h2>
       {content}
     </section>
   );
