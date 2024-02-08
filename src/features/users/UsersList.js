@@ -19,7 +19,7 @@ const UsersList = () => {
     </li>
   ));
 
-  return <ul className="users h-[220px] overflow-y-scroll">{renderedUsers}</ul>;
+  return <ul className="users h-[220px] overflow-y-auto">{renderedUsers}</ul>;
 };
 
 export default UsersList;

@@ -26,14 +26,14 @@ body {
 }
 
 .users::-webkit-scrollbar {
-  background-color: #7D8375;
+  background-color: #010101;
   width: 4px;
   border-radius: 1px;
 }
 
 /* Track */
 .users::-webkit-scrollbar-track {
-  background-color: #7D8375;
+  background-color: #010101;
   border-radius: 1px;
 }
 
