@@ -10,14 +10,15 @@ const UsersList = () => {
     // <SliderCard key={index} name={user.name} website={user.website}/>
     <li
       key={index}
-      className="flex items-center justify-between py-3 text-lg font-[300] "
+      className="leading-[1.3] pr-5 py-2 min-w-fit text-lg font-[400] text-[#010101]"
     >
       <Link to={`/user/${user.id}`}>{user.name}</Link>
-      <ArrowUpRightIcon className="w-5 h-5" />
+      {/* <ArrowUpRightIcon className="w-5 h-5" /> */}
     </li>
   ));
 
-  return <ul className="h-[220px] overflow-y-auto">{renderedUsers}</ul>;
+  return <ul className="flex items-center w-full overflow-auto">
+    <li className="leading-[1.3] pr-5 min-w-fit text-xl font-[400] text-[#C2C2C2]">Find by author</li>{renderedUsers}</ul>;
 };
 
 export default UsersList;

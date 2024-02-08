@@ -11,8 +11,9 @@ const HomePage = () => {
     <>
       <HeroSection />
       <RecentPosts />
-      <Featured />
       <UsersSection />
+      <Featured />
+
     </>
   );
 };
