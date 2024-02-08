@@ -46,6 +46,14 @@ body {
   background: #012863;
 }
 
+.users {
+  scrollbar-width: thin; /* width of the scrollbar */
+}
+
+.users {
+  scrollbar-color: #0143a5 #fff; /* color of the thumb and track */
+}
+
 /* input,
 textarea,
 button,
