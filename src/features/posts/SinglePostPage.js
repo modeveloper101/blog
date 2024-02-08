@@ -10,19 +10,23 @@ import { Link } from "react-router-dom";
 
 const Images = [
   {
-    imgUrl: "https://images.unsplash.com/photo-1573655349936-de6bed86f839?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl:
+      "https://images.unsplash.com/photo-1573655349936-de6bed86f839?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     id: 9,
   },
   {
-    imgUrl: "https://images.unsplash.com/photo-1618352319006-c22d55758c54?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl:
+      "https://images.unsplash.com/photo-1618352319006-c22d55758c54?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     id: 10,
   },
   {
-    imgUrl: "https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl:
+      "https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     id: 11,
   },
   {
-    imgUrl: "https://images.unsplash.com/photo-1528120369764-0423708119ae?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl:
+      "https://images.unsplash.com/photo-1528120369764-0423708119ae?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     id: 12,
   },
 ];
@@ -39,7 +43,9 @@ const SinglePostPage = () => {
   const post = useSelector((state) => selectPostById(state, Number(postId)));
 
   const image = Images.find((image) => image.id === Number(postId));
-  const imgUrl = image ? image.imgUrl : "https://images.unsplash.com/photo-1595236629937-aadaf7c1d99d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  const imgUrl = image
+    ? image.imgUrl
+    : "https://images.unsplash.com/photo-1595236629937-aadaf7c1d99d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   if (!post) {
     return (

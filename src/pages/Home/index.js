@@ -1,13 +1,17 @@
 import React from "react";
 import HeroSection from "./HeroSection";
 import RecentPosts from "../../features/posts/RecentPosts";
-import UsersSection from "./Featured";
+import Featured from "./Featured";
+import UsersSection from "./UsersSection";
+
+
 
 const HomePage = () => {
   return (
     <>
       <HeroSection />
       <RecentPosts />
+      <Featured />
       <UsersSection />
     </>
   );

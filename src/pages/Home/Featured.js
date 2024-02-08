@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const UsersSection = () => {
+const Featured = () => {
   return (
     <section className="flex flex-col overflow-hidden w-full h-[100vh] bg-[#010101]  text-[#E6E4E0] py-[3rem] px-5">
       <div className="pb-6 flex items-end justify-between">
@@ -32,4 +32,4 @@ const UsersSection = () => {
   );
 };
 
-export default UsersSection;
+export default Featured;
