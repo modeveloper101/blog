@@ -75,6 +75,7 @@ const PostsExcerpt = ({ post, imageUrl }) => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
+          mixBlendMode: "difference"
         }}
       >
         <p className={`text-base font-[300] mt-4 text-gray-200 `}>
