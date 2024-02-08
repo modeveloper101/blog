@@ -26,18 +26,21 @@ body {
 }
 
 .users::-webkit-scrollbar {
+  background-color: #7D8375;
   width: 4px;
+  border-radius: 1px;
 }
 
 /* Track */
 .users::-webkit-scrollbar-track {
-  border-radius: 20px;
+  background-color: #7D8375;
+  border-radius: 1px;
 }
 
 /* Handle */
 .users::-webkit-scrollbar-thumb {
-  background: #0143a5;
-  border-radius: 20px;
+  background-color: #A6CA1E;
+  border-radius: 1px;
 }
 
 /* Handle on hover */
@@ -45,13 +48,7 @@ body {
   background: #012863;
 }
 
-.users {
-  scrollbar-width: thin; /* width of the scrollbar */
-}
 
-.users {
-  scrollbar-color: #0143a5 #fff; /* color of the thumb and track */
-}
 
 /* input,
 textarea,

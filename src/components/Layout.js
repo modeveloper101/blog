@@ -9,7 +9,7 @@ const Layout = () => {
       <main className="App bg-[#010101] text-[#E6E4E0]">
         <Outlet />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
