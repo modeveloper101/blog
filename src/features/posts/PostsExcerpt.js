@@ -108,22 +108,23 @@ const PostsExcerpt = ({ post, imageUrl }) => {
       {/* <img
         src={imageUrl}
         alt="blog-post"
-        className="h-[400px] w-full object-cover bg-center rounded-xl"
+        className="h-[400px] w-full object-cover bg-center"
       />
-      <p className="text-sm font-[400] mt-4 text-gray-700">
-        <PostAuthor userId={post.userId} />
-        <TimeAgo timeStamp={post.date} />
-      </p>
-      <h2 className="font-[400] leading-[1.3] text-2xl my-1">{post.title}</h2>
-      <p className="flex justify-between items-end text-base font-[300] mb-1 text-gray-700">
-        {post.body.substring(0, 75)}...{" "}
-        <span className="text-base font-[400]">
-          <Link to={`post/${post.id}`}>
-            <ArrowUpRightIcon className="w-5 h-5" />
-          </Link>
-        </span>
-      </p> */}
-
+      <div className="p-5">
+        <p className="text-base text-[#C2C2C2] font-[300]">
+          <PostAuthor userId={post.userId} />
+          <TimeAgo timeStamp={post.date} />
+        </p>
+        <h2 className="butler-font leading-[1.2] text-3xl my-1">{post.title}</h2>
+        <p className="flex justify-between items-end text-base font-[300] mb-1 text-[#C2C2C2]">
+          {post.body.substring(0, 75)}...{" "}
+          <span className="text-base font-[300]">
+            <Link to={`post/${post.id}`}>
+              <ArrowUpRightIcon className="w-5 h-5" />
+            </Link>
+          </span>
+        </p>
+      </div> */}
       {/* <ReactionButtons post={post} /> */}
     </article>
   );

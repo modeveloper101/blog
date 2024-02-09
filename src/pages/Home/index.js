@@ -3,6 +3,7 @@ import HeroSection from "./HeroSection";
 import RecentPosts from "../../features/posts/RecentPosts";
 import Featured from "./Featured";
 import UsersSection from "./UsersSection";
+import Social from "./Social";
 
 
 
@@ -13,6 +14,7 @@ const HomePage = () => {
       <RecentPosts />
       <UsersSection />
       <Featured />
+      <Social />
 
     </>
   );
