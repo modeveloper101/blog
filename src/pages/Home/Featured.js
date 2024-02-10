@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Countdown from "../../components/Countdown";
 
 const Featured = () => {
   return (
@@ -7,13 +8,14 @@ const Featured = () => {
         <div className="flex flex-col">
           {/* <span className="text-sm bg-[#6396E5] text-[#010101] py-1 px-2 rounded-full capitalize w-fit h-fit font-[500]">
             Coming in 2024 
-            </span> */}
+            </span>
           <h2 className=" text-4xl capitalize">
             Stay <br />
             tuned.
-          </h2>
+          </h2> */}
         </div>
-        <Link to={`/`} className="underline text-base">
+        {/* <Countdown /> */}
+        <Link to={`/`} className="underline text-lg">
           by Ervin Howell
         </Link>
       </div>
