@@ -6,18 +6,19 @@ const Featured = () => {
       <div className=" flex items-end justify-between mb-0">
         <div className="flex flex-col">
           {/* <span className="text-sm bg-[#6396E5] text-[#010101] py-1 px-2 rounded-full capitalize w-fit h-fit font-[500]">
-           Coming in 2024 
-          </span> */}
-          {/* <h2 className=" text-4xl capitalize">
-            Stay <br/>tuned.
-          </h2> */}
+            Coming in 2024 
+            </span> */}
+          <h2 className=" text-4xl capitalize">
+            Stay <br />
+            tuned.
+          </h2>
         </div>
         <Link to={`/`} className="underline text-base">
-           by Ervin Howell
+          by Ervin Howell
         </Link>
       </div>
       <div
-        className="w-full h-[480px] flex flex-col justify-between relative" 
+        className="w-full h-[480px] flex flex-col justify-between relative"
         style={{
           backgroundImage: `url("${process.env.PUBLIC_URL}/blog13.png")`,
           backgroundPosition: "center",
@@ -26,7 +27,7 @@ const Featured = () => {
           filter: "grayscale(20%)",
         }}
       ></div>
-        {/* <Link to={`/`} className="underline text-lg">
+      {/* <Link to={`/`} className="underline text-lg">
            More by Ervin
         </Link> */}
     </section>
