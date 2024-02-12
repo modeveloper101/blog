@@ -8,6 +8,8 @@ import ReactionsButtons from "./ReactionButtons";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+
 const Images = [
   {
     imgUrl:
@@ -38,7 +40,7 @@ const SinglePostPage = () => {
     ". It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.";
   let additionalText2 =
     "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.";
-  let additionalText3 = `Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32.`;
+  let additionalText3 = `Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32.`;
 
   const post = useSelector((state) => selectPostById(state, Number(postId)));
 
@@ -56,9 +58,14 @@ const SinglePostPage = () => {
   }
 
   return (
-    <article className="px-4 h-auto pt-4 pb-8">
+    <article className="px-4 h-auto pt-4 pb-[3rem]">
+      <div>
+        <ArrowLeftIcon className="w-5 h-5 inline-block mr-1" />
+        <Link to={`/`} className="text-lg font-[400]">Back</Link>
+      </div>
+   
       <div
-        className="h-[200px] w-full rounded-xl"
+        className="h-[200px] w-full rounded-xl mt-3"
         style={{
           backgroundImage: `url(${imgUrl})`,
           objectFit: "cover",
@@ -74,14 +81,14 @@ const SinglePostPage = () => {
         </p>
         <ReactionsButtons post={post} />
       </div>
-      <h2 className="butler-font leading-[1.2] text-4xl my-2">{post.title}</h2>
+      <h2 className="butler-font leading-[1.1] text-4xl my-2">{post.title}</h2>
       <p className="text-base font-[300] mb-1 text-[#D3D0CC]">
         {post.body} {additionalText1}{" "}
         <span className="my-3 block">{additionalText2}</span>
         <span className="block">{additionalText3}</span>
       </p>
-      <span className="flex item-center justify-center py-2 rounded-xl w-full font-[400] tracking-wide bg-[#1E1E1E] text-base mt-3">
-        <Link to={`/post/edit/${post.id}`}>Edit Post</Link>
+      <span className="flex item-center justify-center py-2 rounded-sm w-full font-[400] tracking-wide bg-[#1E1E1E] text-base mt-4">
+        <Link to={`/post/edit/${post.id}`}>Edit this Post</Link>
       </span>
     </article>
   );

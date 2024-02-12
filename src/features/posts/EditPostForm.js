@@ -2,8 +2,11 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectPostById, updatePost, deletePost } from "./postsSlice";
 import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { selectAllUsers } from "../users/usersSlice";
+
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 const Images = [
   {
@@ -111,9 +114,13 @@ const EditPostForm = () => {
   };
 
   return (
-    <section className="min-h-[100vh] px-4 pt-4 pb-8">
+    <section className="h-auto px-4 pt-4 pb-[3rem]">
+      <div>
+        <ArrowLeftIcon className="w-5 h-5 inline-block mr-1" />
+        <Link to={`/`} className="text-lg font-[400]">Back</Link>
+      </div>
       <div
-        className="h-[200px] w-full rounded-xl mb-4"
+        className="h-[200px] w-full rounded-xl mt-3 mb-4"
         style={{
           backgroundImage: `url(${imgUrl})`,
           objectFit: "cover",
@@ -127,7 +134,7 @@ const EditPostForm = () => {
           Post Title{" "}
         </label>
         <input
-          className="text-base text-[#C2C2C2] font-[200] bg-transparent border-b border-[#2C2C2C] py-2.5 px-1 min-w-full mt-1 mb-4 focus:ring-blue-500 focus:border-b-blue-500"
+          className="text-base text-[#C2C2C2] font-[200] bg-transparent border-b border-[#2C2C2C] rounded-none outline-none py-2.5 px-1 min-w-full  mb-4 focus:ring-blue-500 focus:border-b-blue-500"
           type="text"
           id="postTitle"
           name="postTitle"
@@ -140,7 +147,7 @@ const EditPostForm = () => {
           Author
         </label>
         <select
-          className="text-base text-[#C2C2C2] font-[200] bg-transparent border-b border-[#2C2C2C] py-2.5  min-w-full mt-1 mb-4"
+          className="text-base text-[#C2C2C2] font-[200] bg-transparent border-b border-[#2C2C2C] rounded-none outline-none py-2.5 min-w-full mb-4"
           id="postAuthor"
           defaultValue={userId}
           onChange={(e) => {
@@ -154,7 +161,7 @@ const EditPostForm = () => {
           Content{" "}
         </label>
         <textarea
-          className="text-base font-[200] text-[#C2C2C2] bg-transparent border-b border-[#2C2C2C] py-2.5 px-1 min-w-full h-auto min-h-[120px] mt-1"
+          className="text-base font-[200] text-[#C2C2C2] bg-transparent border-b border-[#2C2C2C] rounded-none outline-none py-2.5 px-1 min-w-full h-auto min-h-[120px]"
           style={{ resize: "vertical" }}
           id="postContent"
           name="postContent"
@@ -165,15 +172,15 @@ const EditPostForm = () => {
         />
         <div className="mt-auto">
           <button
-            className="flex item-center justify-center py-2 rounded-xl w-full font-[400] uppercase bg-[#1E1E1E] text-base"
+            className="flex item-center justify-center py-2 rounded-xl w-full font-[400] bg-[#1E1E1E] text-base"
             type="button"
             onClick={onSavePostClicked}
             disabled={!canSave}
           >
-            Save 
+            Save Changes
           </button>
           <button
-            className="flex item-center justify-center py-2 rounded-xl w-full font-[500] uppercase bg-transparent text-[#8C1818] text-base mt-2"
+            className="flex item-center justify-center py-2 rounded-xl w-full font-[500] bg-transparent text-[#8C1818] text-base mt-2"
             type="button"
             onClick={onDeletePostClicked}
           >

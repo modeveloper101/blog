@@ -66,7 +66,7 @@ const PostsExcerpt = ({ post, imageUrl }) => {
     >
       {/* {imageOption} */}
       <div
-        className={`h-[380px] w-full flex flex-col justify-end p-5 ${
+        className={`h-[300px] w-full flex flex-col justify-end p-5 ${
           post.id === currentIndex ? "" : "grayscale"
         } transition-all duration-300`}
         style={{
@@ -75,7 +75,7 @@ const PostsExcerpt = ({ post, imageUrl }) => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          mixBlendMode: "difference"
+          mixBlendMode: "difference",
         }}
       >
         <p className={`text-base font-[300] mt-4 text-gray-200 `}>
@@ -87,9 +87,9 @@ const PostsExcerpt = ({ post, imageUrl }) => {
           <span>
             <Link to={`post/${post.id}`}>
               {!isHovered ? (
-                <ArrowUpRightIcon className="w-5 h-5 transition-all duration-300" />
+                <ArrowUpRightIcon className="w-6 h-6 transition-all duration-300" />
               ) : (
-                <ArrowUpRightIcon className="w-5 h-5 rotate-45 transition-all duration-300" />
+                <ArrowUpRightIcon className="w-6 h-6 rotate-45 transition-all duration-300" />
               )}
             </Link>
           </span>
