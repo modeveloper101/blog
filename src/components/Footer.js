@@ -1,5 +1,4 @@
 import React from "react";
-import FooterItem from "./FooterItem";
 import Social from "./Social";
 
 const Footer = () => {
@@ -14,8 +13,8 @@ const Footer = () => {
         <div
           className="flex-1 h-full"
           style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1612861635753-2170a0a4c218?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-            backgroundPosition: "center",
+            backgroundImage: `url("https://images.unsplash.com/photo-1590033951589-f66de432968d?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
+            backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             filter: "grayscale(0%)",
