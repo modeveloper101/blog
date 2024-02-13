@@ -5,9 +5,9 @@ const HeroSection = () => {
   return (
     <div className="w-full h-auto flex flex-col items-center">
       <section className="h-auto w-full md:w-full lg:w-[1350px] flex flex-col items-center justify-center py-[3rem]">
-        <h2 className="font-[400] text-7xl md:text-8xl mb-2 text-center leading-[0.9]">
+        <h2 className="font-[400] text-7xl md:text-8xl mb-2 text-center leading-[0.8]">
           Inside
-          <br className="lg:hidden" /> <span className="butler-font">Cielo</span>
+          <br className="lg:hidden" /> <span className="butler-font">noev</span>
           {/* <span>
             <div
               className="px-12 py-6 md:px-[112px] md:py-10 rounded-full bg-red-100 inline-block"

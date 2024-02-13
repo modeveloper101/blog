@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="flex items-center p-1 gap-x-2 bg-[#E6E4E0] text-[#010101] w-full h-[60px] my-[2rem]">
         <h3 className="text-xl font-[500]">
           #Inside
-          <span className="butler-font">Cielo</span>
+          <span className="butler-font">Noev</span>
         </h3>
         <div
           className="flex-1 h-full"
@@ -32,7 +32,7 @@ const Footer = () => {
       </ul>
 
       <span className="text-sm font-[300] text-[#5D5D5D]">
-        © 2024 Cielo blog. All rights reserved
+        © 2024 Noev blog. All rights reserved
       </span>
     </div>
   );

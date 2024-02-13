@@ -9,16 +9,15 @@ const Layout = () => {
       <div className="mobile-first">
         <div>
           <h1 className="md:text-[8rem] lg:text-[12rem] font-[700] leading-[0.7]">
-            Cielo
+          noev
           </h1>
           <h1 className="md:text-[8rem] lg:text-[12rem] font-[700] GFG leading-[1] text-white">
-            Cielo
+          noev
           </h1>
         </div>
         <span className="text-base xl:text-lg text-white text-center font-[300] absolute bottom-10">
-          While we polish up the desktop version, take a
-          stroll <br /> through our site on your mobile device for a delightful
-          experience.
+          While we polish up the desktop version, take a stroll <br /> through
+          our site on your mobile device for a delightful experience.
         </span>
         {/* <Subscribe>Notify Me</Subscribe> */}
       </div>
