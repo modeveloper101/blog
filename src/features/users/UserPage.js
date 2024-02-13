@@ -31,7 +31,7 @@ const UserPage = () => {
           "https://images.unsplash.com/photo-1595236629937-aadaf7c1d99d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
         alt="blog-post"
-        className="h-[300px] w-full object-cover bg-center"
+        className="h-[250px] w-full object-cover bg-center rounded-sm" 
       />
       <div className="py-5">
         <p className="text-base text-[#C2C2C2] font-[300]">

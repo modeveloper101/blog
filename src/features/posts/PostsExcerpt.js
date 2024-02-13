@@ -63,10 +63,11 @@ const PostsExcerpt = ({ post, imageUrl }) => {
     <article
       onMouseOver={() => setIsHoverd(true)}
       onMouseLeave={() => setIsHoverd(false)}
+      className="mt-4 "
     >
       {/* {imageOption} */}
       <div
-        className={`h-[380px] w-full flex flex-col justify-end p-5 ${
+        className={`h-[380px] w-full flex flex-col justify-end p-5 rounded-sm ${
           post.id === currentIndex ? "" : "grayscale"
         } transition-all duration-300`}
         style={{

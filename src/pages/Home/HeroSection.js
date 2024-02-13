@@ -22,7 +22,7 @@ const HeroSection = () => {
           .
         </h2>
         <p className="font-[300] text-lg px-5 md:text-2xl text-center mb-8">
-          Subscribe to learn more about new products, sales, articles, and
+          Subscribe to learn more about new trends, events, articles, and
           updates.
         </p>
         <Subscribe>Subscribe</Subscribe>
