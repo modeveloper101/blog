@@ -28,7 +28,7 @@ const Images = [
   },
   {
     imgUrl:
-      "https://images.unsplash.com/photo-1528120369764-0423708119ae?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    `${process.env.PUBLIC_URL}/blog11.png`,
     id: 12,
   },
 ];
@@ -82,7 +82,7 @@ const SinglePostPage = () => {
         <ReactionsButtons post={post} />
       </div>
       <h2 className="butler-font leading-[1.1] text-4xl my-2">{post.title}</h2>
-      <p className="text-base font-[300] mb-1 text-[#D3D0CC]">
+      <p className="text-base font-[200] mb-1 text-[#D3D0CC]">
         {post.body} {additionalText1}{" "}
         <span className="my-3 block">{additionalText2}</span>
         <span className="block">{additionalText3}</span>

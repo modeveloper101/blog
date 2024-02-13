@@ -14,7 +14,7 @@ const Footer = () => {
         <div
           className="flex-1 h-full"
           style={{
-            backgroundImage: `url("${process.env.PUBLIC_URL}/footer3.png")`,
+            backgroundImage: `url("https://images.unsplash.com/photo-1612861635753-2170a0a4c218?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",

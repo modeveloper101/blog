@@ -14,11 +14,20 @@ html {
   font-family: "Outfit", sans-serif;
   background-color: white;
   color: #000;
+  overflow: hidden;
 }
 
 body {
   min-height: 100vh;
   font-size: 1.5rem;
+  overflow: hidden;
+}
+
+@media (max-width: 485px) {
+  html,
+  body {
+    overflow: auto;
+  }
 }
 
 .users {
@@ -39,7 +48,7 @@ body {
 
 /* Handle */
 .users::-webkit-scrollbar-thumb {
-  background-color: #A6CA1E;
+  background-color: #a6ca1e;
   border-radius: 1px;
 }
 
@@ -48,7 +57,37 @@ body {
   background: #012863;
 }
 
+.mobile-first {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-image: url("https://images.unsplash.com/photo-1645996831587-a9d4a73586f9?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  z-index: 99999;
+}
 
+@media (max-width: 485px) {
+  .mobile-first {
+    display: none;
+  }
+}
+
+.GFG {
+  transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
 
 /* input,
 textarea,
