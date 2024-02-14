@@ -3,7 +3,7 @@ import Countdown from "../../components/Countdown";
 
 const Featured = () => {
   return (
-    <section className="flex flex-col  overflow-hidden w-full h-auto py-[3rem] px-5">
+    <section className="flex flex-col  overflow-hidden w-full h-auto py-[3rem] px-4">
       <div className=" flex items-end justify-between mb-0">
         <div className="flex flex-col">
           {/* <span className="text-sm bg-[#6396E5] text-[#010101] py-1 px-2 rounded-full capitalize w-fit h-fit font-[500]">

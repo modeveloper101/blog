@@ -87,7 +87,7 @@ const SinglePostPage = () => {
         <span className="my-3 block">{additionalText2}</span>
         <span className="block">{additionalText3}</span>
       </p>
-      <span className="flex item-center justify-center py-2 rounded-sm w-full font-[400] tracking-wide bg-[#1E1E1E] text-base mt-4">
+      <span className="flex item-center justify-center py-2.5 rounded-sm w-full font-[400] tracking-wide bg-[#1E1E1E] text-base mt-4">
         <Link to={`/post/edit/${post.id}`}>Edit this Post</Link>
       </span>
     </article>

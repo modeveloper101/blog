@@ -9,10 +9,10 @@ const Layout = () => {
       <div className="mobile-first">
         <div>
           <h1 className="md:text-[8rem] lg:text-[12rem] font-[700] leading-[0.7]">
-          noev
+          Cileo
           </h1>
           <h1 className="md:text-[8rem] lg:text-[12rem] font-[700] GFG leading-[1] text-white">
-          noev
+          Cileo
           </h1>
         </div>
         <span className="text-base xl:text-lg text-white text-center font-[300] absolute bottom-10">
