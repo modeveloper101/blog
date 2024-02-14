@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Countdown from "../../components/Countdown";
 
 const Featured = () => {
   return (
@@ -14,7 +13,6 @@ const Featured = () => {
             tuned.
           </h2> */}
         </div>
-        {/* <Countdown /> */}
         <Link to={`/`} className="underline text-lg">
           by Ervin Howell
         </Link>
