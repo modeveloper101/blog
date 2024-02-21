@@ -20,7 +20,7 @@ const Featured = () => {
       <div
         className="w-full h-[480px] flex flex-col justify-between relative"
         style={{
-          backgroundImage: `url("${process.env.PUBLIC_URL}/blog13.png")`,
+          backgroundImage: `url("${process.env.PUBLIC_URL}/blog19.png")`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

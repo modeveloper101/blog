@@ -13,8 +13,8 @@ const Footer = () => {
         <div
           className="flex-1 h-full"
           style={{
-            backgroundImage: `url("https://images.pexels.com/photos/5582944/pexels-photo-5582944.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
-            backgroundPosition: "center",
+            backgroundImage: `url("https://images.unsplash.com/photo-1548032145-209b0be6eab4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
+            backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             filter: "grayscale(0%)",
